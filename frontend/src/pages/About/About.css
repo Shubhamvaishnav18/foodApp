@@ -1,0 +1,46 @@
+.about-us {
+    background-color: #fff;
+    color: #333;
+    padding: 40px 40px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #747474; 
+}
+
+.about-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.about-subtitle {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    color: #747474;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+.about-list li {
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #bcb2da;
+    color: #fff;
+    border-radius: 5px;
+}

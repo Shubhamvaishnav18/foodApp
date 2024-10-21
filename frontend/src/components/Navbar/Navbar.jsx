@@ -19,15 +19,19 @@ const Navbar = ({setShowLogin}) => {
 
   return (
     <div className="navbar">
-        <Link to="/"><img src={assets.logo} alt="" className="logo" /></Link>
+        <Link to="/"><img src={assets.logo1} alt="" className="logo" /></Link>
         <ul className="navbar-menu">
-            <Link to="/" onClick={() => setMenu("home")} className={menu==="home"?"active":""}>home</Link>
-            <a href="#explore-menu" onClick={() => setMenu("menu")} className={menu==="menu"?"active":""}>menu</a>
-            <a href="#app-download" onClick={() => setMenu("mobile-app")} className={menu==="mobile-app"?"active":""}>mobile-app</a>
-            <a href="#footer" onClick={() => setMenu("contact us")} className={menu==="contact us"?"active":""}>contact us</a>
+            <Link to="/" onClick={() => setMenu("home")} className={menu==="home"?"active":""}>Home</Link>
+            <Link to="/menu" onClick={() => setMenu("menu")} className={menu==="menu"?"active":""}>Menu</Link>
+            <Link to="/about" onClick={() => setMenu("about")} className={menu==="about"?"active":""}>About</Link>
+            <Link to="/contact" onClick={() => setMenu("contact")} className={menu==="contact"?"active":""}>Contact Us</Link>
+
+            {/* <a href="#explore-menu" onClick={() => setMenu("menu")} className={menu==="menu"?"active":""}>Menu</a>
+            <a href="#app-download" onClick={() => setMenu("mobile-app")} className={menu==="mobile-app"?"active":""}>Mobile-app</a>
+            <a href="#footer" onClick={() => setMenu("contact us")} className={menu==="contact us"?"active":""}>Contact us</a> */}
         </ul>
         <div className="navbar-right">
-            <img src={assets.search_icon} alt="" />
+            {/* <img src={assets.search_icon} alt="" /> */}
             <div className="navbar-search-icon">
                 <Link to="/cart"><img src={assets.basket_icon} alt="" /></Link>
                 <div className={getTotalCartAmount()===0?"":"dot"}></div>
@@ -36,7 +40,7 @@ const Navbar = ({setShowLogin}) => {
             :<div className="navbar-profile">
                 <img src={assets.profile_icon} alt="" />
                 <ul className="nav-profile-dropdown">
-                    <li><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
+                    <li onClick={()=>navigate('/myorders')}><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
                     <hr />
                     <li onClick={logout}><img src={assets.logout_icon} alt="" /><p>Logout</p></li>
                 </ul>

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-top: 50px;
 }
 
 .explore-menu h1 {
@@ -51,7 +52,7 @@
 }
 
 .explore-menu-list-item .active {
-    border: 4px solid tomato;
+    border: 4px solid #958ab7;
     padding: 2px;
 }
 

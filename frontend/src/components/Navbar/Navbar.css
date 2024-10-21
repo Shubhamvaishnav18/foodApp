@@ -6,7 +6,8 @@
 }
 
 .navbar .logo {
-    width: 150px;
+    width: 85px;
+    border-radius: 100%;
 }
 
 .navbar-menu {
@@ -15,6 +16,10 @@
     gap: 20px;
     color: #49557e;
     font-size: 18px;
+}
+
+.navbar-menu a:hover {
+    color: #bcb2da;
 }
 
 .navbar-right {
@@ -35,7 +40,7 @@
 }
 
 .navbar button:hover {
-    background-color: #fff4f2;
+    background-color: #bcb2da;
 }
 
 .navbar .active {
@@ -55,7 +60,7 @@
     position: absolute;
     min-width: 10px;
     min-height: 10px;
-    background-color: tomato;
+    background-color: #bcb2da;
     border-radius: 50px;
     top: -8px;
     right: -8px;
@@ -101,10 +106,10 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: #fff2ef;
+    background-color: #bcb2da;
     padding: 12px 25px;
     border-radius: 4px;
-    border: 1px solid tomato;
+    border: 1px solid #747474;
     outline: 2px solid white;
     list-style: none;
 }
@@ -121,7 +126,7 @@
 }
 
 .nav-profile-dropdown li:hover {
-    color: tomato;
+    color: #747474;
 }
 
 @media (max-width:900px) {
