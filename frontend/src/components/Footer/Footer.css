@@ -66,4 +66,18 @@
     .footer-copyright {
         text-align: center;
     }
+
+    .footer-content-left img {
+        width: 55px;
+    }
+    
+    .footer-content-left p {
+        font-size: 17px;
+    }
+
+    .footer-content-left .footer-social-icons {
+        display: flex;
+        flex-direction: row;
+        width: 3px;
+    }
 }
