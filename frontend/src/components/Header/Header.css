@@ -62,3 +62,12 @@
         padding: 2vw 4vw;
     }
 }
+
+@media (max-width:768px) {
+    .header-contents h2{
+        font-size: 1.2rem;
+    }
+    .header-contents button {
+        font-size: 0.5rem;
+    }
+}
