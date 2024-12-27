@@ -12,6 +12,9 @@ import About from "./pages/About/About"
 import Contact from "./pages/Contact/Contact"
 import Menu from "./pages/Menu/Menu"
 import ScrollToTop from './components/ScrollToTop';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
 
@@ -21,14 +24,16 @@ function App() {
     <>
     {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
     <div className="app">
+      
     <ScrollToTop />
+    <ToastContainer />
       <Navbar setShowLogin = {setShowLogin} />
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/menu" element={<Menu/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
-        <Route path="/cart" element={<Cart/>}/>
+        <Route path="/cart" element={<Cart showLogin={showLogin} setShowLogin={setShowLogin} />}/>
         <Route path="/order" element={<PlaceOrder/>}/>
         <Route path="/verify" element={<Verify/>}/>
         <Route path="/myorders" element={<MyOrders/>}/>
