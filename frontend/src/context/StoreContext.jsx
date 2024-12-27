@@ -6,7 +6,7 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
 
     const [cartItem, setCartItem] = useState({});
-    const url = "https://foodapp-backend-hem0.onrender.com";
+    const url = "http://localhost:4000";
     const [token,setToken] = useState("");
     const [food_list,setFoodList] = useState([]);  //send data to frontend from database
 
@@ -36,7 +36,6 @@ const StoreContextProvider = (props) => {
                 let itemInfo = food_list.find((product) => product._id === item);
                 totalAmount += itemInfo.price * cartItem[item];
             }
-
         }
         return totalAmount;
     }
