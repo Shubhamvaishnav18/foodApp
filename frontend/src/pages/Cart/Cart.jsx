@@ -3,12 +3,22 @@ import "./Cart.css"
 import { StoreContext } from "../../context/StoreContext"
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
-const Cart = () => {
+const Cart = ({ showLogin, setShowLogin }) => {
 
-  const { cartItem, food_list, removeFromCart, getTotalCartAmount, url } = useContext(StoreContext);
+  const { cartItem, food_list, removeFromCart, getTotalCartAmount, url, token} = useContext(StoreContext);
 
   const navigate = useNavigate();
+
+  const handleCheckout = () => {
+    if (!token) {
+      toast.error("Please sign in to proceed to checkout!");
+      setShowLogin(true); 
+    } else {
+      navigate("/order");
+    }
+  };
 
   return (
     <div className="cart">
@@ -60,7 +70,7 @@ const Cart = () => {
               <b>${getTotalCartAmount()===0?0:getTotalCartAmount()+2}</b>
             </div>
           </div>
-          <button onClick={()=>navigate("/order")}>PROCEED TO CHECKOUT</button>
+          <button onClick={handleCheckout}>PROCEED TO CHECKOUT</button>  
         </div>
         <div className="cart-promocode">
           <div>
