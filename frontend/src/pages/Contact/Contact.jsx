@@ -24,7 +24,7 @@ const Contact = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     
-    const response = await axios.post('http://localhost:4000/api/contact/contact', formData); // Make sure the URL matches your backend API route
+    const response = await axios.post('https://foodapp-backend-hem0.onrender.com', formData); // Make sure the URL matches your backend API route
 
     if (response.data.success) {
       setSuccessMessage("Thank you, we'll contact you soon");
