@@ -1,4 +1,4 @@
-.app-download {
+/* .app-download {
     margin: auto auto;
     margin-top: 100px;
     font-size: max(3vw, 20px);
@@ -22,4 +22,120 @@
 
 .app-download-platforms img:hover {
     transform: scale(1.05);
+} */
+
+/* ================================
+   Service Section (Modern UI)
+================================ */
+.service-section {
+    margin: 100px auto;
+    text-align: center;
+    padding: 0 5vw;
+}
+
+.service-title {
+    font-size: max(3vw, 26px);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Card structure */
+.service-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f6f6f6;
+    border-radius: 20px;
+    padding: 40px;
+    gap: 40px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Text area */
+.service-info {
+    text-align: left;
+    flex: 1;
+}
+
+.service-info h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.service-info p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.service-info button {
+    padding: 10px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    background: #958ab7;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service-info button:hover {
+    background: #7a6baa;
+}
+
+/* Image side */
+.service-img img {
+    width: 260px;
+    border-radius: 16px;
+}
+
+
+
+/* ====================================
+   MOBILE VIEW
+==================================== */
+@media (max-width: 768px) {
+    .service-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .service-info {
+        text-align: center;
+    }
+
+    .service-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .service-info p {
+        font-size: 0.9rem;
+        max-width: 90%;
+        margin: 0 auto 20px;
+    }
+
+    .service-img img {
+        width: 200px;
+    }
+}
+
+
+/* Extra Small Mobile */
+@media (max-width: 450px) {
+    .service-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .service-info button {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .service-img img {
+        width: 180px;
+    }
 }
