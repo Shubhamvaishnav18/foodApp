@@ -5,7 +5,7 @@
     margin-top: 50px;
 }
 
-.explore-menu h1 {
+.explore-menu h3 {
     color: #262626;
     font-weight: 500;
 }
@@ -21,7 +21,7 @@
     align-items: center;
     gap: 30px;
     text-align: center;
-    margin: 20px 0px;
+    margin: 10px 0px;
     overflow-x: scroll;
 }
 
@@ -61,3 +61,64 @@
         max-width: 100%;
     }
 }
+
+@media (max-width:480px) {
+    .explore-menu h1 {
+        font-size: 30px;
+    }
+}
+
+/* =============================
+   📱 MOBILE UI (Below 600px)
+============================= */
+@media (max-width: 600px) {
+
+    .explore-menu {
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .explore-menu h3 {
+        font-size: 22px;
+        font-weight: 600;
+        text-align: start;
+        /* margin-bottom: 8px; */
+    }
+
+    /* ⭐ Proper 3-grid layout */
+    .explore-menu-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        padding: 10px 0;
+        overflow: hidden;
+        justify-items: center;
+    }
+
+    /* ⭐ Perfect image size for 3 per row */
+    .explore-menu-list-item img {
+        width: 22vw;        /* fits 3 items */
+        max-width: 85px;     /* ensures consistent size */
+        min-width: 65px;     /* prevents too small */
+        aspect-ratio: 1/1;   /* always a circle */
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    /* Text under images */
+    .explore-menu-list-item p {
+        margin-top: 6px;
+        font-size: 12.5px;
+        font-weight: 500;
+        color: #333;
+        text-align: center;
+    }
+
+    /* Active category */
+    .explore-menu-list-item .active {
+        border: 3px solid #958ab7;
+        padding: 2px;
+    }
+}
+
+
