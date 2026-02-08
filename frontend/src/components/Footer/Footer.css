@@ -81,35 +81,3 @@
         width: 3px;
     }
 }
-
-/* Text logo placed in footer */
-.footer-logo {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.footer-logo .nbc {
-    font-size: 32px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    color: white;
-}
-
-.footer-logo .nothing {
-    font-size: 12px;
-    letter-spacing: 1px;
-    color: #d9d9d9;
-}
-
-
-/* MOBILE LOGO STYLE */
-@media (max-width: 750px) {
-    .footer-logo .nbc {
-        font-size: 22px;
-    }
-
-    .footer-logo .nothing {
-        font-size: 10px;
-    }
-}
