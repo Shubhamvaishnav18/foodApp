@@ -11,11 +11,7 @@ const Footer = () => {
         <div className="footer" id="footer">
             <div className="footer-content">
                 <div className="footer-content-left">
-                    {/* <img src={assets.logo1} alt="" /> */}
-                    <div className="footer-logo">
-                        <div className="nbc">NBC</div>
-                        <div className="nothing">Nothing before Chai</div>
-                    </div>
+                    <img src={assets.logo1} alt="" />
                     <p>
                     Food is essential for life, providing energy, nutrients, and well-being. It unites people, allowing them to share cultures and experiences. Beyond sustenance, food brings joy, comfort, and endless flavors that connect us to the world.</p>
                     <div className="footer-social-icons">
@@ -37,13 +33,13 @@ const Footer = () => {
                     <h2>GET IN TOUCH</h2>
                     <ul>
                         <li>+91-9974683342</li>
-                        <li>contact@nbc.com</li>
+                        <li>contact@foodly.com</li>
                     </ul>
                 </div>
             </div>
             <hr />
             <p className="footer-copyright">
-                Copyright 2024 nbc.com - All Right Reserved.
+                Copyright 2024 Foodly.com - All Right Reserved.
             </p>
         </div>
     )
