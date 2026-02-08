@@ -1,19 +1,11 @@
 .header {
     height: 34vw;
     margin: 30px auto;
-    position: relative;
-    overflow: hidden;
-    border-radius: 6px;
-}
-
-/* Slider image full screen */
-.header-slide {
-    height: 34vw;
+    background: url('/header_1.png') no-repeat;
     background-size: cover;
-    background-position: center;
+    position: relative;
 }
 
-/* Keep your existing text styles */
 .header .header-contents {
     position: absolute;
     display: flex;
@@ -34,6 +26,7 @@
 
 .header-contents p {
     color: #2d2d2f;
+    font-weight: 8vw;
 }
 
 .header-contents button {
@@ -46,10 +39,35 @@
     border-radius: 50px;
 }
 
-@media (max-width: 450px) {
-    .header-contents p {
-        font-size: 0.65rem;
-        line-height: 1.05;
-        max-width: 70%;
+.header-contents button:hover {
+    cursor: pointer;
+}
+
+@media (max-width:1050px) {
+    .header-contents {
+        max-width: 45%;
+    }
+}
+
+@media (max-width:850px) {
+    .header-contents {
+        max-width: 65%;
+    }
+
+    .header-contents p{
+        display: none;
+    }
+
+    .header-contents button {
+        padding: 2vw 4vw;
+    }
+}
+
+@media (max-width:768px) {
+    .header-contents h2{
+        font-size: 1.2rem;
+    }
+    .header-contents button {
+        font-size: 0.5rem;
     }
 }
